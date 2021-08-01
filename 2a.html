@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC"-//w3c//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtm">
+<head>
+	<title>palindrome.html</title>
+</head>
+<body style="background-color: black; color: yellow;">
+	<script type="text/javascript">
+
+		var n = Number(prompt("Enter the number: "));
+		var x = n;
+		var rev=0;
+		var rem=0;
+		var sum=0;
+
+		while(n>0){
+			rem = (n % 10);
+			rev = (rev * 10) + rem;
+			sum = sum + rem;
+			n = parseInt(n/10);
+		}
+
+		if(x==rev){
+			document.write("The given number "+x+" is a palindrome"+"<br>");
+			document.write("The sum of the given number "+x+" is "+sum);
+		}
+		else
+		{
+			document.write("The given number "+x+" is not a palindrome ");		
+		}
+
+	</script>
+</body>

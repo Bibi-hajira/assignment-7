@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC"-//w3c//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtm">
+<head>
+	<title>palindrome.html</title>
+</head>
+<body style="background-color: black; color: yellow;">
+	<script type="text/javascript">
+
+		var bordersize = prompt("Select a table border size \n"+
+								"0 (no border)\n"+
+								"1 (1 pixel border)\n"+
+								"4 (4 pixel border)\n"+
+								"8 (8 pixel border)\n");
+
+		switch(bordersize){
+			case "0":document.write("<table>");
+					 break;
+			case "1":document.write("<table border='1'>");
+					 break;
+			case "4":document.write("<table border='4'>");
+					 break;
+			case "8":document.write("<table border='8'>");
+					 break;
+			default:document.write("Error - Invalid choice: ",bordersize,"<br>");
+					 break;
+		}
+
+		document.write("<caption>2006 NFL Divisional Winners</caption>");
+		document.write("<tr>",
+					   "<th/>",
+					   "<th>Amercian Conference</th>",
+					   "<th>National Conference</th>",
+					   "</tr>",
+					   "<tr>",
+					   "<th>East</th>",
+					   "<th>New England Patriots</th>",
+					   "<th>Philidelphia Eagles</th>",
+					   "</tr>",
+					   "<tr>",
+					   "<th>North</th>",
+					   "<th>Baltimore Ravens</th>",
+					   "<th>Chicago Bears</th>",
+					   "</tr>",
+					   "<tr>",
+					   "<th>West</th>",
+					   "<th>San Diego Chargers</th>",
+					   "<th>Seattle Seahawks</th>",
+					   "</tr>",
+					   "<tr>",
+					   "<th>South</th>",
+					   "<th>Indianapolis Colts</th>",
+					   "<th>New Orleans Saints</th>",
+					   "</tr>",
+					   "</table>");
+
+	</script>
+</body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student - 5</title>
+</head>
+
+<body>
+
+    <h3 id="name"></h3>
+    <h3 id="regno"></h3>
+    <h3 id="age"></h3>
+    <h3 id="hobbies"></h3>
+    <h2><u>Marks in 5 subjects</u></h2>
+    <h3 id="m1"></h3>
+    <h3 id="m2"></h3>
+    <h3 id="m3"></h3>
+    <h3 id="m4"></h3>
+    <h3 id="m5"></h3>
+    <h3 id="total"></h3>
+    <h3 id="average"></h3>
+    <h3 id="result"></h3>
+
+
+    <script>
+        const student = {
+            name: "Ramdev",
+            regno: 2011321,
+            age: 50,
+            marks: {
+                sub1: 80,
+                sub2: 70,
+                sub3: 60,
+                sub4: 50,
+                sub5: 42
+            },
+            hobbies: {
+                one: "Coin Collection",
+                two: "Stamp Collection"
+            }
+
+        };
+        // document.getElementById("result").innerHTML=JSON.stringify(student, null, 4);
+        document.getElementById("name").innerHTML = "Name : " + student.name;
+        document.getElementById("regno").innerHTML = "Regno: " + student.regno;
+        document.getElementById("age").innerHTML = "Age: " + student.age;
+        document.getElementById("hobbies").innerHTML = "Hobbies: " + student.hobbies.one + ", " + student.hobbies.two;
+        document.getElementById("m1").innerHTML = student.marks.sub1;
+        document.getElementById("m2").innerHTML = student.marks.sub2;
+        document.getElementById("m3").innerHTML = student.marks.sub3;
+        document.getElementById("m4").innerHTML = student.marks.sub4;
+        document.getElementById("m5").innerHTML = student.marks.sub5;
+        var tot = student.marks.sub1 + student.marks.sub2 + student.marks.sub3 + student.marks.sub4 + student.marks.sub5;
+        avg=tot/5;
+        document.getElementById("total").innerHTML = "Total marks: " + tot;
+        document.getElementById("average").innerHTML = "Average: " + avg;
+        var result = "";
+        if (avg > 75) { result = "Distinction :))"; }
+        else if (avg > 35) {result = "Pass :)";}
+        else{ result = "Fail :("; }
+        document.getElementById("result").innerHTML = "Result: " + result;
+
+
+    </script>
+
+
+
+</body>
+
+</html>

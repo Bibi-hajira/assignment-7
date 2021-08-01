@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <label for="">Enter array seperated by comas</label>
+    <br>
+    <input type="text" name="arr" id="arrStr">
+    <br>
+    <br>
+    <label for="">Enter element to be searched in this array</label>
+    <br>
+    <input type="text" name="arr" id="keyElement">
+    <br>
+    <br>
+    <button type="submit" id="" onclick="compute();">Search</button>
+    <br>
+    <h1 id="secondHighest"></h1>
+    <h1 id="searchResult"></h1>
+
+    <script>
+        function secondMax(arr) {
+            var max = Math.max.apply(null, arr); // get the max of the array
+            arr.splice(arr.indexOf(max), 1); // remove max from the array
+            return Math.max.apply(null, arr);
+        };
+        function compute() {
+            var arrStr = document.getElementById("arrStr").value;
+            var keyElement = document.getElementById("keyElement").value;
+            if (arrStr == "" || keyElement == "") {
+                alert("Enter both The fields");
+                return;
+            }
+
+            var arr = arrStr.split(',');
+            var index = arr.indexOf(keyElement);
+            var SecondMax = secondMax(arr);
+            var sh = document.getElementById("secondHighest");
+
+            sh.innerHTML = "Second max is " + SecondMax;
+            var sr = document.getElementById("searchResult");
+            if (index != -1)
+                sr.innerHTML = keyElement + " is found at index " + index;
+            else
+                sr.innerHTML = keyElement + " is not found in the given array";
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
